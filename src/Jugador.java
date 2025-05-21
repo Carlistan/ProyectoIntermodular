@@ -2702,14 +2702,314 @@ public class Jugador {
 	public static void InsertarJugadoresValladolid(MongoCollection<Document> collection) {
 	    List<Document> jugadoresValladolid = new ArrayList<>();
 
-	   
+	    jugadoresValladolid.add(new Document("nombre", "Karl Hein")
+	    	    .append("nacionalidad", List.of("Estonia"))
+	    	    .append("edad", 23)
+	    	    .append("posicion", "Portero")
+	    	    .append("equipos", List.of("Real Valladolid", "Arsenal FC")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "André Ferreira")
+	    	    .append("nacionalidad", List.of("Portugal"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Portero")
+	    	    .append("equipos", List.of("Real Valladolid", "Granada CF")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Eray Cömert")
+	    	    .append("nacionalidad", List.of("Suiza", "Turquía"))
+	    	    .append("edad", 27)
+	    	    .append("posicion", "Defensa central")
+	    	    .append("equipos", List.of("Real Valladolid", "Valencia CF")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Javi Sánchez")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Defensa central")
+	    	    .append("equipos", List.of("Real Valladolid")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Cenk Özkacar")
+	    	    .append("nacionalidad", List.of("Turquía"))
+	    	    .append("edad", 24)
+	    	    .append("posicion", "Defensa central")
+	    	    .append("equipos", List.of("Real Valladolid", "Valencia CF")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "David Torres")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 22)
+	    	    .append("posicion", "Defensa central")
+	    	    .append("equipos", List.of("Real Valladolid")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Joseph Aidoo")
+	    	    .append("nacionalidad", List.of("Ghana"))
+	    	    .append("edad", 29)
+	    	    .append("posicion", "Defensa central")
+	    	    .append("equipos", List.of("Real Valladolid", "RC Celta de Vigo")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Adam Aznou")
+	    	    .append("nacionalidad", List.of("Marruecos", "España"))
+	    	    .append("edad", 18)
+	    	    .append("posicion", "Lateral izquierdo")
+	    	    .append("equipos", List.of("Real Valladolid", "Bayern Múnich")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Henrique Silva")
+	    	    .append("nacionalidad", List.of("Brasil"))
+	    	    .append("edad", 31)
+	    	    .append("posicion", "Lateral izquierdo")
+	    	    .append("equipos", List.of("Real Valladolid")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Antonio Candela")
+	    	    .append("nacionalidad", List.of("Italia"))
+	    	    .append("edad", 25)
+	    	    .append("posicion", "Lateral derecho")
+	    	    .append("equipos", List.of("Real Valladolid", "Venezia FC")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Luis Pérez")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 30)
+	    	    .append("posicion", "Lateral derecho")
+	    	    .append("equipos", List.of("Real Valladolid")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Florian Grillitsch")
+	    	    .append("nacionalidad", List.of("Austria"))
+	    	    .append("edad", 29)
+	    	    .append("posicion", "Pivote")
+	    	    .append("equipos", List.of("Real Valladolid", "TSG 1899 Hoffenheim")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Mario Martín")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 21)
+	    	    .append("posicion", "Pivote")
+	    	    .append("equipos", List.of("Real Valladolid", "Real Madrid Castilla")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Stanko Juric")
+	    	    .append("nacionalidad", List.of("Croacia"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Pivote")
+	    	    .append("equipos", List.of("Real Valladolid", "Parma")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Tamás Nikitscher")
+	    	    .append("nacionalidad", List.of("Hungría"))
+	    	    .append("edad", 25)
+	    	    .append("posicion", "Mediocentro")
+	    	    .append("equipos", List.of("Real Valladolid", "Kecskeméti TE")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Selim Amallah")
+	    	    .append("nacionalidad", List.of("Marruecos", "Bélgica"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Mediocentro ofensivo")
+	    	    .append("equipos", List.of("Real Valladolid", "Valencia CF")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Chuki")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 21)
+	    	    .append("posicion", "Mediocentro ofensivo")
+	    	    .append("equipos", List.of("Real Valladolid", "Real Valladolid Promesas")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Raúl Moro")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 22)
+	    	    .append("posicion", "Extremo izquierdo")
+	    	    .append("equipos", List.of("Real Valladolid", "SS Lazio")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Darwin Machís")
+	    	    .append("nacionalidad", List.of("Venezuela", "España"))
+	    	    .append("edad", 32)
+	    	    .append("posicion", "Extremo izquierdo")
+	    	    .append("equipos", List.of("Real Valladolid", "Cádiz CF")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Kenedy")
+	    	    .append("nacionalidad", List.of("Brasil"))
+	    	    .append("edad", 29)
+	    	    .append("posicion", "Extremo izquierdo")
+	    	    .append("equipos", List.of("Real Valladolid", "CF Pachuca")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Amath Ndiaye")
+	    	    .append("nacionalidad", List.of("Senegal", "España"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Extremo derecho")
+	    	    .append("equipos", List.of("Real Valladolid", "RCD Mallorca")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Anuar")
+	    	    .append("nacionalidad", List.of("Marruecos", "España"))
+	    	    .append("edad", 30)
+	    	    .append("posicion", "Extremo derecho")
+	    	    .append("equipos", List.of("Real Valladolid")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Iván Sánchez")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 32)
+	    	    .append("posicion", "Extremo derecho")
+	    	    .append("equipos", List.of("Real Valladolid")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Juanmi Latasa")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 24)
+	    	    .append("posicion", "Delantero centro")
+	    	    .append("equipos", List.of("Real Valladolid", "Real Madrid CF")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Mamadou Sylla")
+	    	    .append("nacionalidad", List.of("Senegal", "España"))
+	    	    .append("edad", 31)
+	    	    .append("posicion", "Delantero centro")
+	    	    .append("equipos", List.of("Real Valladolid")));
+
+	    	jugadoresValladolid.add(new Document("nombre", "Marcos André")
+	    	    .append("nacionalidad", List.of("Brasil", "España"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Delantero centro")
+	    	    .append("equipos", List.of("Real Valladolid")));
+
+	    
 	    collection.insertMany(jugadoresValladolid);
 	}
 	
 	public static void InsertarJugadoresLeganes(MongoCollection<Document> collection) {
 	    List<Document> jugadoresLeganes = new ArrayList<>();
 
-	   
+	    jugadoresLeganes.add(new Document("nombre", "Juan Soriano")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 27)
+	    	    .append("posicion", "Portero")
+	    	    .append("equipos", List.of("CD Leganés", "CD Tenerife")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Marko Dmitrovic")
+	    	    .append("nacionalidad", List.of("Serbia"))
+	    	    .append("edad", 33)
+	    	    .append("posicion", "Portero")
+	    	    .append("equipos", List.of("CD Leganés", "Sevilla FC")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Sergio González")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 33)
+	    	    .append("posicion", "Defensa central")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Jorge Sáenz")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Defensa central")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Matija Nastasić")
+	    	    .append("nacionalidad", List.of("Serbia"))
+	    	    .append("edad", 32)
+	    	    .append("posicion", "Defensa central")
+	    	    .append("equipos", List.of("CD Leganés", "RCD Mallorca")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Javi Hernández")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 27)
+	    	    .append("posicion", "Lateral izquierdo")
+	    	    .append("equipos", List.of("CD Leganés", "Cádiz CF")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Enric Franquesa")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Lateral izquierdo")
+	    	    .append("equipos", List.of("CD Leganés", "Levante UD")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Borna Barisic")
+	    	    .append("nacionalidad", List.of("Croacia"))
+	    	    .append("edad", 32)
+	    	    .append("posicion", "Lateral izquierdo")
+	    	    .append("equipos", List.of("CD Leganés", "Trabzonspor")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Valentin Rosier")
+	    	    .append("nacionalidad", List.of("Francia", "Guadalupe"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Lateral derecho")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Adrià Altimira")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 24)
+	    	    .append("posicion", "Lateral derecho")
+	    	    .append("equipos", List.of("CD Leganés", "Villarreal CF")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Renato Tapia")
+	    	    .append("nacionalidad", List.of("Perú", "Países Bajos"))
+	    	    .append("edad", 29)
+	    	    .append("posicion", "Pivote")
+	    	    .append("equipos", List.of("CD Leganés", "RC Celta de Vigo")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Yvan Neyou")
+	    	    .append("nacionalidad", List.of("Camerún", "Francia"))
+	    	    .append("edad", 28)
+	    	    .append("posicion", "Pivote")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Julián Chicco")
+	    	    .append("nacionalidad", List.of("Argentina", "Italia"))
+	    	    .append("edad", 27)
+	    	    .append("posicion", "Pivote")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Seydouba Cissé")
+	    	    .append("nacionalidad", List.of("Guinea"))
+	    	    .append("edad", 24)
+	    	    .append("posicion", "Mediocentro")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Darko Brasanac")
+	    	    .append("nacionalidad", List.of("Serbia"))
+	    	    .append("edad", 33)
+	    	    .append("posicion", "Mediocentro")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Óscar Rodríguez")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 26)
+	    	    .append("posicion", "Mediocentro ofensivo")
+	    	    .append("equipos", List.of("CD Leganés", "Sevilla FC")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Roberto López")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 25)
+	    	    .append("posicion", "Mediocentro ofensivo")
+	    	    .append("equipos", List.of("CD Leganés", "Real Sociedad")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Juan Cruz")
+	    	    .append("nacionalidad", List.of("España", "Argentina"))
+	    	    .append("edad", 25)
+	    	    .append("posicion", "Extremo izquierdo")
+	    	    .append("equipos", List.of("CD Leganés", "Real Betis Balompié")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Duk")
+	    	    .append("nacionalidad", List.of("Cabo Verde", "Portugal"))
+	    	    .append("edad", 25)
+	    	    .append("posicion", "Extremo izquierdo")
+	    	    .append("equipos", List.of("CD Leganés", "Aberdeen FC")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Yan Diomande")
+	    	    .append("nacionalidad", List.of("Costa de Marfil"))
+	    	    .append("edad", 18)
+	    	    .append("posicion", "Extremo izquierdo")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Dani Raba")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 29)
+	    	    .append("posicion", "Extremo derecho")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Munir El Haddadi")
+	    	    .append("nacionalidad", List.of("Marruecos", "España"))
+	    	    .append("edad", 29)
+	    	    .append("posicion", "Extremo derecho")
+	    	    .append("equipos", List.of("CD Leganés", "UD Las Palmas")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Miguel de la Fuente")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 25)
+	    	    .append("posicion", "Delantero centro")
+	    	    .append("equipos", List.of("CD Leganés", "Deportivo Alavés")));
+
+	    	jugadoresLeganes.add(new Document("nombre", "Diego García")
+	    	    .append("nacionalidad", List.of("España"))
+	    	    .append("edad", 25)
+	    	    .append("posicion", "Delantero centro")
+	    	    .append("equipos", List.of("CD Leganés")));
+
+	    
 	    collection.insertMany(jugadoresLeganes);
 	}
 				
