@@ -1601,12 +1601,295 @@ public class Jugador {
 	public static void InsertarJugadoresOsasuna(MongoCollection<Document> collection) {
 	    List<Document> jugadoresOsasuna = new ArrayList<>();
 	    
+	    jugadoresOsasuna.add(new Document("nombre", "Sergio Herrera")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 31)
+	        .append("posicion", "Portero")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Aitor Fernández")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 34)
+	        .append("posicion", "Portero")
+	        .append("equipos", Arrays.asList("Real Valladolid CF", "Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Enzo Boyomo")
+	        .append("nacionalidad", List.of("Camerún", "Francia"))
+	        .append("edad", 23)
+	        .append("posicion", "Defensa central")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Jorge Herrando")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 24)
+	        .append("posicion", "Defensa central")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Alejandro Catena")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 30)
+	        .append("posicion", "Defensa central")
+	        .append("equipos", Arrays.asList("Sin equipo", "Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Unai García")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 33)
+	        .append("posicion", "Defensa central")
+	        .append("equipos", Arrays.asList("Real Oviedo", "Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Abel Bretones")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 24)
+	        .append("posicion", "Lateral izquierdo")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Juan Cruz")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 32)
+	        .append("posicion", "Lateral izquierdo")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Jesús Areso")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 25)
+	        .append("posicion", "Lateral derecho")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Rubén Peña")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 33)
+	        .append("posicion", "Lateral derecho")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Lucas Torró")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 30)
+	        .append("posicion", "Pivote")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Iker Muñoz")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 22)
+	        .append("posicion", "Pivote")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Jon Moncayola")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 27)
+	        .append("posicion", "Mediocentro")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Pablo Ibáñez")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 26)
+	        .append("posicion", "Mediocentro")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Aimar Oroz")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 23)
+	        .append("posicion", "Mediocentro ofensivo")
+	        .append("equipos", Arrays.asList("Bayern Múnich", "Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Bryan Zaragoza")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 23)
+	        .append("posicion", "Extremo izquierdo")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Moi Gómez")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 30)
+	        .append("posicion", "Extremo izquierdo")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "José Manuel Arnáiz")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 30)
+	        .append("posicion", "Extremo izquierdo")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Rubén García")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 31)
+	        .append("posicion", "Extremo derecho")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Kike Barja")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 28)
+	        .append("posicion", "Extremo derecho")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Ante Budimir")
+	        .append("nacionalidad", List.of("Croacia"))
+	        .append("edad", 33)
+	        .append("posicion", "Delantero centro")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    jugadoresOsasuna.add(new Document("nombre", "Raúl García")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 24)
+	        .append("posicion", "Delantero centro")
+	        .append("equipos", Arrays.asList("Osasuna")));
+
+	    
 	    collection.insertMany(jugadoresOsasuna);
 	}
 
 	
 	public static void InsertarJugadoresCelta(MongoCollection<Document> collection) {
 	    List<Document> jugadoresCelta = new ArrayList<>();
+
+	    jugadoresCelta.add(new Document("nombre", "Iván Villar")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 27)
+	        .append("posicion", "Portero")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Vicente Guaita")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 38)
+	        .append("posicion", "Portero")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Javi Rodríguez")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 21)
+	        .append("posicion", "Defensa central")
+	        .append("equipos", Arrays.asList("RC Celta Fortuna", "Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Carl Starfelt")
+	        .append("nacionalidad", List.of("Suecia"))
+	        .append("edad", 29)
+	        .append("posicion", "Defensa central")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Carlos Domínguez")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 24)
+	        .append("posicion", "Defensa central")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Yoel Lago")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 21)
+	        .append("posicion", "Defensa central")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Marcos Alonso")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 34)
+	        .append("posicion", "Lateral izquierdo")
+	        .append("equipos", Arrays.asList("FC Barcelona", "Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Mihailo Ristic")
+	        .append("nacionalidad", List.of("Serbia", "Bosnia y Herzegovina"))
+	        .append("edad", 29)
+	        .append("posicion", "Lateral izquierdo")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Óscar Mingueza")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 26)
+	        .append("posicion", "Lateral derecho")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Sergio Carreira")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 24)
+	        .append("posicion", "Lateral derecho")
+	        .append("equipos", Arrays.asList("Elche CF", "Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Javier Manquillo")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 31)
+	        .append("posicion", "Lateral derecho")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Damián Rodríguez")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 22)
+	        .append("posicion", "Pivote")
+	        .append("equipos", Arrays.asList("RC Celta Fortuna", "Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Jailson")
+	        .append("nacionalidad", List.of("Brasil"))
+	        .append("edad", 29)
+	        .append("posicion", "Pivote")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Fran Beltrán")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 26)
+	        .append("posicion", "Mediocentro")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Hugo Sotelo")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 21)
+	        .append("posicion", "Mediocentro")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Ilaix Moriba")
+	        .append("nacionalidad", List.of("Guinea", "España"))
+	        .append("edad", 22)
+	        .append("posicion", "Mediocentro")
+	        .append("equipos", Arrays.asList("RB Leipzig", "Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Hugo Álvarez")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 21)
+	        .append("posicion", "Extremo izquierdo")
+	        .append("equipos", Arrays.asList("RC Celta Fortuna", "Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Williot Swedberg")
+	        .append("nacionalidad", List.of("Suecia"))
+	        .append("edad", 21)
+	        .append("posicion", "Extremo izquierdo")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Alfon González")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 26)
+	        .append("posicion", "Extremo izquierdo")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Franco Cervi")
+	        .append("nacionalidad", List.of("Argentina", "Italia"))
+	        .append("edad", 30)
+	        .append("posicion", "Extremo izquierdo")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Fer López")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 20)
+	        .append("posicion", "Extremo derecho")
+	        .append("equipos", Arrays.asList("Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Iker Losada")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 23)
+	        .append("posicion", "Mediapunta")
+	        .append("equipos", Arrays.asList("Real Betis Balompié", "Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Pablo Durán")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 23)
+	        .append("posicion", "Delantero centro")
+	        .append("equipos", Arrays.asList("RC Celta Fortuna", "Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Borja Iglesias")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 32)
+	        .append("posicion", "Delantero centro")
+	        .append("equipos", Arrays.asList("Real Betis Balompié", "Celta")));
+
+	    jugadoresCelta.add(new Document("nombre", "Iago Aspas")
+	        .append("nacionalidad", List.of("España"))
+	        .append("edad", 37)
+	        .append("posicion", "Delantero centro")
+	        .append("equipos", Arrays.asList("Celta")));
 
 	    
 	    collection.insertMany(jugadoresCelta);
@@ -1620,11 +1903,47 @@ public class Jugador {
 	    collection.insertMany(jugadoresEspanyol);
 	}
 
+	public static void InsertarJugadoresMallorca(MongoCollection<Document> collection) {
+	    List<Document> jugadoresMallorca = new ArrayList<>();
+
+	   
+	    collection.insertMany(jugadoresMallorca);
+	}
 	
+	public static void InsertarJugadoresGetafe(MongoCollection<Document> collection) {
+	    List<Document> jugadoresGetafe = new ArrayList<>();
+
+	   
+	    collection.insertMany(jugadoresGetafe);
+	}
 	
+	public static void InsertarJugadoresAlaves(MongoCollection<Document> collection) {
+	    List<Document> jugadoresAlaves = new ArrayList<>();
+
+	   
+	    collection.insertMany(jugadoresAlaves);
+	}
 	
+	public static void InsertarJugadoresRayoVallecano(MongoCollection<Document> collection) {
+	    List<Document> jugadoresRayoVallecano = new ArrayList<>();
+
+	   
+	    collection.insertMany(jugadoresRayoVallecano);
+	}
 	
+	public static void InsertarJugadoresValladolid(MongoCollection<Document> collection) {
+	    List<Document> jugadoresValladolid = new ArrayList<>();
+
+	   
+	    collection.insertMany(jugadoresValladolid);
+	}
 	
+	public static void InsertarJugadoresLeganes(MongoCollection<Document> collection) {
+	    List<Document> jugadoresLeganes = new ArrayList<>();
+
+	   
+	    collection.insertMany(jugadoresLeganes);
+	}
 				
 	public static void main(String[] args) {
         String direccion_mongo = "mongodb+srv://javiercarmonasolis2006:2PXjxAw1MGPcNuLy@carmona.xw1p8zv.mongodb.net/?retryWrites=true&w=majority&appName=Carmona";
@@ -1642,7 +1961,6 @@ public class Jugador {
             InsertarJugadoresAtleticoBilbao(collectionJugadores);
             InsertarJugadoresVillarreal(collectionJugadores);
             InsertarJugadoresValencia(collectionJugadores);
-            
             InsertarJugadoresGirona(collectionJugadores);
             InsertarJugadoresSevilla(collectionJugadores);
             InsertarJugadoresBetis(collectionJugadores);
@@ -1650,7 +1968,14 @@ public class Jugador {
             InsertarJugadoresOsasuna(collectionJugadores);
             InsertarJugadoresCelta(collectionJugadores);
             InsertarJugadoresEspanyol(collectionJugadores);
-
+            InsertarJugadoresMallorca(collectionJugadores);
+            InsertarJugadoresGetafe(collectionJugadores);
+            InsertarJugadoresAlaves(collectionJugadores);
+            InsertarJugadoresRayoVallecano(collectionJugadores);
+            InsertarJugadoresValladolid(collectionJugadores);
+            InsertarJugadoresLeganes(collectionJugadores);
+            
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
