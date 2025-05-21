@@ -461,163 +461,163 @@ public class Jugador {
 	public static void InsertarJugadoresRealSociedad(MongoCollection<Document> collection) {
         List<Document> jugadoresRealSociedad = new ArrayList<>();
 
-        
+
         jugadoresRealSociedad.add(new Document("nombre", "Álex Remiro")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 30)
-        	    .append("posicion", "Portero")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 30)
+            .append("posicion", "Portero")
+            .append("equipos", Arrays.asList("Athletic Club", "Levante", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Unai Marrero")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 23)
-        	    .append("posicion", "Portero")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 23)
+            .append("posicion", "Portero")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Nayef Aguerd")
-        	    .append("nacionalidad", List.of("Marruecos"))
-        	    .append("edad", 29)
-        	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("Marruecos"))
+            .append("edad", 29)
+            .append("posicion", "Defensa central")
+            .append("equipos", Arrays.asList("FUS Rabat", "Dijon", "Rennes", "West Ham", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Igor Zubeldia")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 28)
-        	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 28)
+            .append("posicion", "Defensa central")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Jon Pacheco")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 24)
-        	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Real Sociedad"));
-
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 24)
+            .append("posicion", "Defensa central")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Aritz Elustondo")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 31)
-        	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 31)
+            .append("posicion", "Defensa central")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Jon Martín")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 19)
-        	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 19)
+            .append("posicion", "Defensa central")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Javi López")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 23)
-        	    .append("posicion", "Lateral izquierdo")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 23)
+            .append("posicion", "Lateral izquierdo")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Aihen Muñoz")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 27)
-        	    .append("posicion", "Lateral izquierdo")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 27)
+            .append("posicion", "Lateral izquierdo")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Jon Aramburu")
-        	    .append("nacionalidad", List.of("Venezuela", "España"))
-        	    .append("edad", 22)
-        	    .append("posicion", "Lateral derecho")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("Venezuela"))
+            .append("edad", 22)
+            .append("posicion", "Lateral derecho")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Hamari Traoré")
-        	    .append("nacionalidad", List.of("Malí"))
-        	    .append("edad", 33)
-        	    .append("posicion", "Lateral derecho")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("Malí"))
+            .append("edad", 33)
+            .append("posicion", "Lateral derecho")
+            .append("equipos", Arrays.asList("Paris FC", "Lierse", "Reims", "Rennes", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Álvaro Odriozola")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 29)
-        	    .append("posicion", "Lateral derecho")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 29)
+            .append("posicion", "Lateral derecho")
+            .append("equipos", Arrays.asList("Real Sociedad", "Real Madrid", "Bayern Múnich", "Fiorentina", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Martín Zubimendi")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 26)
-        	    .append("posicion", "Pivote")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 26)
+            .append("posicion", "Pivote")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Luka Sucic")
-        	    .append("nacionalidad", List.of("Croacia"))
-        	    .append("edad", 22)
-        	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("Croacia"))
+            .append("edad", 22)
+            .append("posicion", "Mediocentro")
+            .append("equipos", Arrays.asList("Liefering", "Red Bull Salzburg", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Beñat Turrientes")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 23)
-        	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 23)
+            .append("posicion", "Mediocentro")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Jon Ander Olasagasti")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 24)
-        	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 24)
+            .append("posicion", "Mediocentro")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Brais Méndez")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 28)
-        	    .append("posicion", "Mediocentro ofensivo")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 28)
+            .append("posicion", "Mediocentro ofensivo")
+            .append("equipos", Arrays.asList("Celta de Vigo", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Arsen Zakharyan")
-        	    .append("nacionalidad", List.of("Rusia"))
-        	    .append("edad", 21)
-        	    .append("posicion", "Mediocentro ofensivo")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("Rusia"))
+            .append("edad", 21)
+            .append("posicion", "Mediocentro ofensivo")
+            .append("equipos", Arrays.asList("Dynamo Moscú", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Pablo Marín")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 21)
-        	    .append("posicion", "Mediocentro ofensivo")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 21)
+            .append("posicion", "Mediocentro ofensivo")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Ander Barrenetxea")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 23)
-        	    .append("posicion", "Extremo izquierdo")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 23)
+            .append("posicion", "Extremo izquierdo")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Sheraldo Becker")
-        	    .append("nacionalidad", List.of("Surinam", "Países Bajos"))
-        	    .append("edad", 30)
-        	    .append("posicion", "Extremo izquierdo")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("Surinam"))
+            .append("edad", 30)
+            .append("posicion", "Extremo izquierdo")
+            .append("equipos", Arrays.asList("ADO Den Haag", "PEC Zwolle", "Union Berlin", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Arkaitz Mariezkurrena")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 20)
-        	    .append("posicion", "Extremo izquierdo")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 20)
+            .append("posicion", "Extremo izquierdo")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Takefusa Kubo")
-        	    .append("nacionalidad", List.of("Japón"))
-        	    .append("edad", 23)
-        	    .append("posicion", "Extremo derecho")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("Japón"))
+            .append("edad", 23)
+            .append("posicion", "Extremo derecho")
+            .append("equipos", Arrays.asList("FC Tokyo", "Yokohama F. Marinos", "Mallorca", "Villarreal", "Getafe", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Sergio Gómez")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 24)
-        	    .append("posicion", "Extremo derecho")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 24)
+            .append("posicion", "Extremo derecho")
+            .append("equipos", Arrays.asList("Borussia Dortmund", "Huesca", "Anderlecht", "Manchester City", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Mikel Oyarzabal")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 28)
-        	    .append("posicion", "Delantero centro")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 28)
+            .append("posicion", "Delantero centro")
+            .append("equipos", Arrays.asList("Real Sociedad B", "Real Sociedad")));
 
         jugadoresRealSociedad.add(new Document("nombre", "Orri Óskarsson")
-        	    .append("nacionalidad", List.of("Islandia"))
-        	    .append("edad", 20)
-        	    .append("posicion", "Delantero centro")
-        	    .append("equipo", "Real Sociedad"));
+            .append("nacionalidad", Arrays.asList("Islandia"))
+            .append("edad", 20)
+            .append("posicion", "Delantero centro")
+            .append("equipos", Arrays.asList("Copenhagen", "Real Sociedad B", "Real Sociedad")));
+
         collection.insertMany(jugadoresRealSociedad);
 
 	}
@@ -625,149 +625,104 @@ public class Jugador {
 	public static void InsertarJugadoresAtleticoBilbao(MongoCollection<Document> collection) {
         List<Document> jugadoresAtleticoBilbao = new ArrayList<>();
 	
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Unai Simón")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 27)
-        	    .append("posicion", "Portero")
-        	    .append("equipo", "Athletic Club"));
+        List<Document> jugadoresAthleticClub = new ArrayList<>();
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Julen Agirrezabala")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 24)
-        	    .append("posicion", "Portero")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Unai Simón")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 27)
+            .append("posicion", "Portero")
+            .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Dani Vivian")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 25)
-        	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Julen Agirrezabala")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 23)
+            .append("posicion", "Portero")
+            .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Aitor Paredes")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 25)
-        	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Aitor Paredes")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 24)
+            .append("posicion", "Defensa central")
+            .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Yeray Álvarez")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 30)
-        	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Yeray Álvarez")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 29)
+            .append("posicion", "Defensa central")
+            .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Unai Núñez")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 28)
-        	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Dani Vivian")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 25)
+            .append("posicion", "Defensa central")
+            .append("equipos", Arrays.asList("Athletic Club B", "Mirandés", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Adama Boiro")
-        	    .append("nacionalidad", List.of("España", "Senegal"))
-        	    .append("edad", 22)
-        	    .append("posicion", "Lateral izquierdo")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Íñigo Lekue")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 31)
+            .append("posicion", "Lateral derecho")
+            .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Yuri Berchiche")
-        	    .append("nacionalidad", List.of("España", "Argelia"))
-        	    .append("edad", 35)
-        	    .append("posicion", "Lateral izquierdo")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Óscar de Marcos")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 35)
+            .append("posicion", "Lateral derecho")
+            .append("equipos", Arrays.asList("Alavés", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Andoni Gorosabel")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 28)
-        	    .append("posicion", "Lateral derecho")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Yuri Berchiche")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 34)
+            .append("posicion", "Lateral izquierdo")
+            .append("equipos", Arrays.asList("Real Sociedad", "PSG", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Iñigo Lekue")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 32)
-        	    .append("posicion", "Lateral derecho")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Iñigo Ruiz de Galarreta")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 30)
+            .append("posicion", "Mediocentro")
+            .append("equipos", Arrays.asList("Athletic Club B", "Mallorca", "Las Palmas", "Eibar", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Óscar de Marcos")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 36)
-        	    .append("posicion", "Lateral derecho")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Oihan Sancet")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 24)
+            .append("posicion", "Mediocentro ofensivo")
+            .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Mikel Vesga")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 32)
-        	    .append("posicion", "Pivote")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Unai Gómez")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 21)
+            .append("posicion", "Mediocentro")
+            .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Mikel Jauregizar")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 21)
-        	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Iker Muniain")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 32)
+            .append("posicion", "Extremo izquierdo")
+            .append("equipos", Arrays.asList("Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Beñat Prados")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 24)
-        	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Nico Williams")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 22)
+            .append("posicion", "Extremo derecho")
+            .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Iñigo Ruiz de Galarreta")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 31)
-        	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Álex Berenguer")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 29)
+            .append("posicion", "Extremo izquierdo")
+            .append("equipos", Arrays.asList("Osasuna", "Torino", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Oihan Sancet")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 25)
-        	    .append("posicion", "Mediocentro ofensivo")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Iñaki Williams")
+            .append("nacionalidad", Arrays.asList("Ghana"))
+            .append("edad", 30)
+            .append("posicion", "Delantero centro")
+            .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Unai Gómez")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 21)
-        	    .append("posicion", "Mediocentro ofensivo")
-        	    .append("equipo", "Athletic Club"));
+        jugadoresAthleticClub.add(new Document("nombre", "Gorka Guruzeta")
+            .append("nacionalidad", Arrays.asList("España"))
+            .append("edad", 28)
+            .append("posicion", "Delantero centro")
+            .append("equipos", Arrays.asList("Athletic Club B", "Sabadel", "Amorebieta", "Athletic Club")));
 
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Peio Canales")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 20)
-        	    .append("posicion", "Mediocentro ofensivo")
-        	    .append("equipo", "Athletic Club"));
-
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Nico Williams")
-        	    .append("nacionalidad", List.of("España", "Ghana"))
-        	    .append("edad", 22)
-        	    .append("posicion", "Extremo izquierdo")
-        	    .append("equipo", "Athletic Club"));
-
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Álex Berenguer")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 29)
-        	    .append("posicion", "Extremo izquierdo")
-        	    .append("equipo", "Athletic Club"));
-
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Álvaro Djaló")
-        	    .append("nacionalidad", List.of("España", "Guinea-Bissau"))
-        	    .append("edad", 25)
-        	    .append("posicion", "Extremo izquierdo")
-        	    .append("equipo", "Athletic Club"));
-
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Iñaki Williams")
-        	    .append("nacionalidad", List.of("Ghana", "España"))
-        	    .append("edad", 30)
-        	    .append("posicion", "Extremo derecho")
-        	    .append("equipo", "Athletic Club"));
-
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Gorka Guruzeta")
-        	    .append("nacionalidad", List.of("España"))
-        	    .append("edad", 28)
-        	    .append("posicion", "Delantero centro")
-        	    .append("equipo", "Athletic Club"));
-
-        jugadoresAtleticoBilbao.add(new Document("nombre", "Maroan Sannadi")
-        	    .append("nacionalidad", List.of("España", "Marruecos"))
-        	    .append("edad", 24)
-        	    .append("posicion", "Delantero centro")
-        	    .append("equipo", "Athletic Club"));
         collection.insertMany(jugadoresAtleticoBilbao);
 	}
 	
