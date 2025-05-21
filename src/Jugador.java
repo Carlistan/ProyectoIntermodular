@@ -318,144 +318,142 @@ public class Jugador {
 
 		
         jugadoresAtleticoMadrid.add(new Document("nombre", "Jan Oblak")
-        	    .append("nacionalidad", List.of("Eslovenia"))
+        	    .append("nacionalidad", Arrays.asList("Eslovenia"))
         	    .append("edad", 32)
         	    .append("posicion", "Portero")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Olimpija Ljubljana", "Benfica", "Rio Ave", "Uniao Leiria", "Olhanense", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Juan Musso")
-        	    .append("nacionalidad", List.of("Argentina", "Italia"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Juan Musso")
+        	    .append("nacionalidad", Arrays.asList("Argentina"))
         	    .append("edad", 31)
         	    .append("posicion", "Portero")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Racing Club", "Udinese", "Atalanta", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Robin Le Normand")
-        	    .append("nacionalidad", List.of("España", "Francia"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Robin Le Normand")
+        	    .append("nacionalidad", Arrays.asList("España"))
         	    .append("edad", 28)
         	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Stade Brestois", "Real Sociedad", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "José María Giménez")
-        	    .append("nacionalidad", List.of("Uruguay", "España"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "José María Giménez")
+        	    .append("nacionalidad", Arrays.asList("Uruguay"))
         	    .append("edad", 30)
         	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Danubio", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Clément Lenglet")
-        	    .append("nacionalidad", List.of("Francia"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Clément Lenglet")
+        	    .append("nacionalidad", Arrays.asList("Francia"))
         	    .append("edad", 29)
         	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Nancy", "Sevilla", "Barcelona", "Tottenham", "Aston Villa", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Axel Witsel")
-        	    .append("nacionalidad", List.of("Bélgica", "Martinica"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Axel Witsel")
+        	    .append("nacionalidad", Arrays.asList("Bélgica"))
         	    .append("edad", 36)
         	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Standard Liège", "Benfica", "Zenit", "Tianjin Quanjian", "Borussia Dortmund", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "César Azpilicueta")
-        	    .append("nacionalidad", List.of("España"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "César Azpilicueta")
+        	    .append("nacionalidad", Arrays.asList("España"))
         	    .append("edad", 35)
         	    .append("posicion", "Defensa central")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Osasuna", "Marsella", "Chelsea", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Reinildo Mandava")
-        	    .append("nacionalidad", List.of("Mozambique"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Reinildo Mandava")
+        	    .append("nacionalidad", Arrays.asList("Mozambique"))
         	    .append("edad", 31)
         	    .append("posicion", "Lateral izquierdo")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Benfica B", "Fafe", "Sporting Covilhã", "Belenenses", "Lille", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Javi Galán")
-        	    .append("nacionalidad", List.of("España"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Javi Galán")
+        	    .append("nacionalidad", Arrays.asList("España"))
         	    .append("edad", 30)
         	    .append("posicion", "Lateral izquierdo")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Córdoba", "Huesca", "Celta", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Nahuel Molina")
-        	    .append("nacionalidad", List.of("Argentina"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Nahuel Molina")
+        	    .append("nacionalidad", Arrays.asList("Argentina"))
         	    .append("edad", 27)
         	    .append("posicion", "Lateral derecho")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Boca Juniors", "Defensa y Justicia", "Rosario Central", "Udinese", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Pablo Barrios")
-        	    .append("nacionalidad", List.of("España"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Pablo Barrios")
+        	    .append("nacionalidad", Arrays.asList("España"))
         	    .append("edad", 21)
         	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Real Madrid Juvenil", "Atlético de Madrid B", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Conor Gallagher")
-        	    .append("nacionalidad", List.of("Inglaterra", "Irlanda"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Conor Gallagher")
+        	    .append("nacionalidad", Arrays.asList("Inglaterra"))
         	    .append("edad", 25)
         	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Chelsea", "Charlton", "Swansea", "West Brom", "Crystal Palace", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Rodrigo De Paul")
-        	    .append("nacionalidad", List.of("Argentina", "Italia"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Rodrigo De Paul")
+        	    .append("nacionalidad", Arrays.asList("Argentina"))
         	    .append("edad", 30)
         	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Racing Club", "Valencia", "Udinese", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Koke")
-        	    .append("nacionalidad", List.of("España"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Koke")
+        	    .append("nacionalidad", Arrays.asList("España"))
         	    .append("edad", 33)
         	    .append("posicion", "Mediocentro")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Atlético de Madrid B", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Marcos Llorente")
-        	    .append("nacionalidad", List.of("España"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Marcos Llorente")
+        	    .append("nacionalidad", Arrays.asList("España"))
         	    .append("edad", 30)
         	    .append("posicion", "Interior derecho")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Real Madrid", "Alavés", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Thomas Lemar")
-        	    .append("nacionalidad", List.of("Francia", "Guadalupe"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Thomas Lemar")
+        	    .append("nacionalidad", Arrays.asList("Francia"))
         	    .append("edad", 29)
         	    .append("posicion", "Mediocentro ofensivo")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Caen", "Monaco", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Samuel Lino")
-        	    .append("nacionalidad", List.of("Brasil"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Samuel Lino")
+        	    .append("nacionalidad", Arrays.asList("Brasil"))
         	    .append("edad", 25)
         	    .append("posicion", "Extremo izquierdo")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Flamengo", "Gil Vicente", "Valencia", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Rodrigo Riquelme")
-        	    .append("nacionalidad", List.of("España"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Rodrigo Riquelme")
+        	    .append("nacionalidad", Arrays.asList("España"))
         	    .append("edad", 25)
         	    .append("posicion", "Extremo izquierdo")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Bournemouth", "Mirandés", "Girona", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Giuliano Simeone")
-        	    .append("nacionalidad", List.of("Argentina", "Italia"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Giuliano Simeone")
+        	    .append("nacionalidad", Arrays.asList("Argentina"))
         	    .append("edad", 22)
         	    .append("posicion", "Extremo derecho")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Zaragoza", "Alavés", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Ángel Correa")
-        	    .append("nacionalidad", List.of("Argentina", "España"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Ángel Correa")
+        	    .append("nacionalidad", Arrays.asList("Argentina"))
         	    .append("edad", 30)
         	    .append("posicion", "Extremo derecho")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("San Lorenzo", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Julián Alvarez")
-        	    .append("nacionalidad", List.of("Argentina", "Italia"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Julián Álvarez")
+        	    .append("nacionalidad", Arrays.asList("Argentina"))
         	    .append("edad", 25)
         	    .append("posicion", "Delantero centro")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("River Plate", "Manchester City", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Alexander Sørloth")
-        	    .append("nacionalidad", List.of("Noruega"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Alexander Sørloth")
+        	    .append("nacionalidad", Arrays.asList("Noruega"))
         	    .append("edad", 29)
         	    .append("posicion", "Delantero centro")
-        	    .append("equipo", "Atlético de Madrid"));
+        	    .append("equipos", Arrays.asList("Rosenborg", "Groningen", "Midtjylland", "Crystal Palace", "Gent", "Trabzonspor", "RB Leipzig", "Real Sociedad", "Atlético de Madrid")));
 
-        jugadoresAtleticoMadrid.add(new Document("nombre", "Antoine Griezmann")
-        	    .append("nacionalidad", List.of("Francia"))
+        	jugadoresAtleticoMadrid.add(new Document("nombre", "Antoine Griezmann")
+        	    .append("nacionalidad", Arrays.asList("Francia"))
         	    .append("edad", 34)
         	    .append("posicion", "Delantero centro")
-        	    .append("equipo", "Atlético de Madrid"));
-        collection.insertMany(jugadoresAtleticoMadrid);
-
+        	    .append("equipos", Arrays.asList("Real Sociedad", "Atlético de Madrid", "Barcelona", "Atlético de Madrid")));
 
 	}
 	
