@@ -3031,6 +3031,7 @@ public class Jugador {
             InsertarJugadoresGirona(collectionJugadores);
             InsertarJugadoresSevilla(collectionJugadores);
             InsertarJugadoresBetis(collectionJugadores);
+            
             InsertarJugadoresPalmas(collectionJugadores);
             InsertarJugadoresOsasuna(collectionJugadores);
             InsertarJugadoresCelta(collectionJugadores);
