@@ -22,20 +22,15 @@ public class TresEnRaya extends JFrame {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+		        String direccion_mongo = "mongodb+srv://javiercarmonasolis2006:2PXjxAw1MGPcNuLy@clusterintermodular.whimpxk.mongodb.net/?retryWrites=true&w=majority&appName=ClusterIntermodular";
 				try {
 					
-					   String direccion_mongo = "mongodb+srv://javiercarmonasolis2006:2PXjxAw1MGPcNuLy@clusterintermodular.whimpxk.mongodb.net/?retryWrites=true&w=majority&appName=ClusterIntermodular";
-			        	
-			        	MongoClient mongoClient = MongoClients.create(direccion_mongo);
-			            
-			            MongoDatabase database = mongoClient.getDatabase("futbol3raya");
-			            MongoCollection<Document> collectionJugadores = database.getCollection("jugadores");
-			           	            
-			
-					
-					
-					
-					
+					MongoClient mongoClient = MongoClients.create(direccion_mongo);
+		            
+		            MongoDatabase database = mongoClient.getDatabase("futbol3raya");
+		            MongoCollection<Document> collectionJugadores = database.getCollection("jugadores");
+		            
+				
 					TresEnRaya frame = new TresEnRaya();
 					frame.setVisible(true);
 				} catch (Exception e) {
