@@ -24,7 +24,7 @@ public class Jugador {
                 .append("nacionalidad", Arrays.asList("Ucrania"))
                 .append("edad", 26)
                 .append("posicion", "Portero")
-                .append("equipos", Arrays.asList("Dnipro", "Zorya Luhansk", "Real Madrid", "Leganés", "Valladolid", "Oviedo")));
+                .append("equipos", Arrays.asList("Dnipro",  "Real Madrid", "Leganés", "Valladolid", "Oviedo")));
 
             jugadoresMadrid.add(new Document("nombre", "Éder Militão")
                 .append("nacionalidad", Arrays.asList("Brasil"))
