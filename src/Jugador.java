@@ -3014,13 +3014,12 @@ public class Jugador {
 	}
 				
 	public static void main(String[] args) {
-        String direccion_mongo = "mongodb+srv://javiercarmonasolis2006:<db_password>@cluster0.wrre9zb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
+        String direccion_mongo = "mongodb+srv://javiercarmonasolis2006:2PXjxAw1MGPcNuLy@clusterintermodular.whimpxk.mongodb.net/?retryWrites=true&w=majority&appName=ClusterIntermodular";
         try  {       	
         	MongoClient mongoClient = MongoClients.create(direccion_mongo);
             
             MongoDatabase database = mongoClient.getDatabase("futbol3raya");
-            MongoCollection<Document> collectionJugadores = database.getCollection("Jugador");
+            MongoCollection<Document> collectionJugadores = database.getCollection("jugadores");
             
             InsertarJugadoresMadrid(collectionJugadores);
             InsertarJugadoresBarcelona(collectionJugadores);
