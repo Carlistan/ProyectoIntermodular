@@ -623,7 +623,7 @@ public class Jugador {
 	}
 	
 	public static void InsertarJugadoresAtleticoBilbao(MongoCollection<Document> collection) {
-        List<Document> jugadoresAtleticoBilbao = new ArrayList<>();
+
 	
         List<Document> jugadoresAthleticClub = new ArrayList<>();
 
@@ -723,7 +723,7 @@ public class Jugador {
             .append("posicion", "Delantero centro")
             .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        collection.insertMany(jugadoresAtleticoBilbao);
+        collection.insertMany(jugadoresAthleticClub);
 	}
 	
 	public static void InsertarJugadoresVillarreal(MongoCollection<Document> collection) {
