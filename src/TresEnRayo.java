@@ -1,172 +1,165 @@
-import com.mongodb.client.*;
-import org.bson.Document;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
+import org.bson.Document;
+import com.mongodb.client.*;
 import java.util.*;
 import java.util.List;
 
-public class TresEnRayo extends JFrame {
-    private final JButton[][] tablero = new JButton[3][3];
-    private List<String> equipos;
-    private List<String> posiciones;
 
-    private final JTextField campoNombre = new JTextField();
-    private final JLabel estado = new JLabel("Turno de X", SwingConstants.CENTER);
-    private boolean turnoX = true;
-    private MongoCollection<Document> coleccionJugadores;
-    private final JButton botonReiniciar = new JButton("Reiniciar");
+public class TresEnRayo extends JFrame {
+
+    private JButton[][] botones = new JButton[3][3];
+    private boolean turnoJugadorX = true;
+    private MongoCollection<Document> collection;
+    private JTextField nombreJugadorField;
+    private String[] paises = {"Portugal", "Alemania", "Brasil", "España", "Francia", "Argentina", "Uruguay"};
+    private String[] equipos = {"Real Madrid", "Betis", "Alavés", "Barcelona", "Sevilla", "Valencia", "Osasuna"};
+
 
     public TresEnRayo() {
-        setTitle("Fútbol en Raya");
-        setSize(600, 700);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setTitle("FÚTBOL EN RAYA");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(600, 600);
         setLayout(new BorderLayout());
-        getContentPane().setBackground(new Color(200, 220, 255));
 
-        // Conexión y carga dinámica de categorías
-        conectarMongoDB();
-        cargarCategorias(); // llena 'equipos' y 'posiciones'
-        Collections.shuffle(equipos);
-        Collections.shuffle(posiciones);
-        equipos = equipos.subList(0, 3);
-        posiciones = posiciones.subList(0, 3);
-
-        // Título
-        JLabel titulo = new JLabel("FUTBOL EN RAYA", SwingConstants.CENTER);
-        titulo.setFont(new Font("Arial Black", Font.BOLD, 32));
-        titulo.setForeground(Color.BLACK);
-        titulo.setBorder(BorderFactory.createEmptyBorder(10,0,10,0));
-        add(titulo, BorderLayout.NORTH);
-
-        // Panel de categorías y tablero
-        JPanel panelCentro = new JPanel(new BorderLayout());
-        panelCentro.setOpaque(false);
-
-        // Cabecera con equipos
-        JPanel header = new JPanel(new GridLayout(1, 4));
-        header.setOpaque(false);
-        header.add(new JLabel("", SwingConstants.CENTER));
-        for (String eq : equipos) {
-            JLabel lbl = new JLabel(eq, SwingConstants.CENTER);
-            lbl.setFont(new Font("Arial", Font.BOLD, 18));
-            lbl.setOpaque(true);
-            lbl.setBackground(Color.BLACK);
-            lbl.setForeground(Color.WHITE);
-            header.add(lbl);
-        }
-        panelCentro.add(header, BorderLayout.NORTH);
-
-        // Tablero con posiciones
-        JPanel body = new JPanel(new GridLayout(3, 4));
-        body.setOpaque(false);
-        Font fontBoton = new Font("Arial", Font.BOLD, 28);
-        for (int r = 0; r < 3; r++) {
-            // etiqueta de posición
-            JLabel lblPos = new JLabel(posiciones.get(r), SwingConstants.CENTER);
-            lblPos.setFont(new Font("Arial", Font.BOLD, 18));
-            lblPos.setOpaque(true);
-            lblPos.setBackground(Color.BLACK);
-            lblPos.setForeground(Color.WHITE);
-            body.add(lblPos);
-            for (int c = 0; c < 3; c++) {
-                JButton btn = new JButton("");
-                btn.setFont(fontBoton);
-                final int rf = r, cf = c;
-                btn.addActionListener(e -> validarYMarcar(rf, cf));
-                tablero[r][c] = btn;
-                body.add(btn);
-            }
-        }
-        panelCentro.add(body, BorderLayout.CENTER);
-        add(panelCentro, BorderLayout.CENTER);
-
-        // Zona inferior: campo nombre y estado
-        JPanel footer = new JPanel(new BorderLayout(10, 10));
-        footer.setOpaque(false);
-        campoNombre.setFont(new Font("Arial", Font.PLAIN, 20));
-        footer.add(new JLabel("JUGADOR:"), BorderLayout.WEST);
-        footer.add(campoNombre, BorderLayout.CENTER);
-        footer.add(botonReiniciar, BorderLayout.EAST);
-        botonReiniciar.setVisible(false);
-        botonReiniciar.addActionListener(e -> reiniciarJuego());
-
-        estado.setFont(new Font("Arial", Font.PLAIN, 18));
-        footer.add(estado, BorderLayout.SOUTH);
-        footer.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        add(footer, BorderLayout.SOUTH);
-
-        setVisible(true);
-    }
-
-    private void conectarMongoDB() {
+        // MongoDB
         String uri = "mongodb+srv://javiercarmonasolis2006:2PXjxAw1MGPcNuLy@clusterintermodular.whimpxk.mongodb.net/?retryWrites=true&w=majority&appName=ClusterIntermodular";
-        MongoClient client = MongoClients.create(uri);
-        MongoDatabase db = client.getDatabase("futbol3raya");
-        coleccionJugadores = db.getCollection("jugadores");
-    }
+        MongoClient mongoClient = MongoClients.create(uri);
+        MongoDatabase database = mongoClient.getDatabase("futbolEnRaya");
+        collection = database.getCollection("partidas");
 
-    private void cargarCategorias() {
-        equipos = coleccionJugadores.distinct("equipos", String.class).into(new ArrayList<>());
-        posiciones = coleccionJugadores.distinct("posicion", String.class).into(new ArrayList<>());
-    }
+        // Elegimos aleatoriamente 3 países y 3 equipos
+        List<String> listaPaises = new ArrayList<>(Arrays.asList(paises));
+        List<String> listaEquipos = new ArrayList<>(Arrays.asList(equipos));
+        Collections.shuffle(listaPaises);
+        Collections.shuffle(listaEquipos);
+        String[] paisesSeleccionados = listaPaises.subList(0, 3).toArray(new String[0]);
+        String[] equiposSeleccionados = listaEquipos.subList(0, 3).toArray(new String[0]);
 
-    private void validarYMarcar(int fila, int col) {
-        String nombre = campoNombre.getText().trim();
-        if (nombre.isEmpty()) { estado.setText("⚠️ Introduce un nombre."); return; }
+        JPanel topPanel = new JPanel(new GridLayout(1, 4));
+        topPanel.add(new JLabel(""));
+        for (String equipo : equiposSeleccionados) {
+            topPanel.add(createHeaderLabel(equipo));
+        }
+        add(topPanel, BorderLayout.NORTH);
 
-        String equipo = equipos.get(col);
-        String pos = posiciones.get(fila);
-        Document query = new Document("nombre", nombre)
-                .append("equipos", equipo)
-                .append("posicion", pos);
+        JPanel centerPanel = new JPanel(new GridLayout(3, 4));
 
-        if (coleccionJugadores.find(query).first() != null) {
-            JButton b = tablero[fila][col];
-            b.setText(turnoX ? "X" : "◯");
-            b.setForeground(turnoX ? Color.RED : Color.GREEN);
-            b.setEnabled(false);
-            campoNombre.setText("");
-            if (hayGanador()) {
-                estado.setText("🏆 ¡Ganador: " + (turnoX ? "X" : "O") + "!");
-                desactivarTablero();
-                botonReiniciar.setVisible(true);
-            } else {
-                turnoX = !turnoX;
-                estado.setText("Turno de " + (turnoX ? "X" : "O"));
+        for (int i = 0; i < 3; i++) {
+            centerPanel.add(createHeaderLabel(paisesSeleccionados[i]));
+            for (int j = 0; j < 3; j++) {
+                JButton boton = new JButton("");
+                boton.setFont(new Font("Arial", Font.BOLD, 40));
+                boton.setBackground(Color.WHITE);
+                int fila = i;
+                int columna = j;
+                boton.addActionListener(e -> manejarJugada(fila, columna));
+                botones[i][j] = boton;
+                centerPanel.add(boton);
             }
+        }
+        add(centerPanel, BorderLayout.CENTER);
+
+        JPanel bottomPanel = new JPanel(new FlowLayout());
+        bottomPanel.add(new JLabel("JUGADOR:"));
+        nombreJugadorField = new JTextField(20);
+        bottomPanel.add(nombreJugadorField);
+        add(bottomPanel, BorderLayout.SOUTH);
+    }
+
+    private JLabel createHeaderLabel(String text) {
+        JLabel label = new JLabel(text, SwingConstants.CENTER);
+        label.setFont(new Font("Arial", Font.BOLD, 16));
+        label.setOpaque(true);
+        label.setBackground(Color.BLACK);
+        label.setForeground(Color.WHITE);
+        return label;
+    }
+
+    private void manejarJugada(int fila, int columna) {
+        JButton boton = botones[fila][columna];
+        if (!boton.getText().equals("")) return;
+
+        if (turnoJugadorX) {
+            boton.setText("✔");
+            boton.setForeground(new Color(0, 153, 0));
         } else {
-            estado.setText("❌ Jugador no válido para " + pos + " en " + equipo);
+            boton.setText("✘");
+            boton.setForeground(Color.RED);
+        }
+
+        if (hayGanador()) {
+            String ganador = turnoJugadorX ? "Jugador ✔" : "Jugador ✘";
+            JOptionPane.showMessageDialog(this, "¡Ganó " + ganador + "!");
+            guardarPartida(ganador);
+            reiniciarTablero();
+        } else if (tableroLleno()) {
+            JOptionPane.showMessageDialog(this, "¡Empate!");
+            guardarPartida("Empate");
+            reiniciarTablero();
+        } else {
+            turnoJugadorX = !turnoJugadorX;
         }
     }
 
     private boolean hayGanador() {
         for (int i = 0; i < 3; i++) {
-            if (linea(tablero[i][0], tablero[i][1], tablero[i][2])) return true;
-            if (linea(tablero[0][i], tablero[1][i], tablero[2][i])) return true;
+            if (!botones[i][0].getText().equals("") &&
+                botones[i][0].getText().equals(botones[i][1].getText()) &&
+                botones[i][1].getText().equals(botones[i][2].getText())) return true;
+
+            if (!botones[0][i].getText().equals("") &&
+                botones[0][i].getText().equals(botones[1][i].getText()) &&
+                botones[1][i].getText().equals(botones[2][i].getText())) return true;
         }
-        return linea(tablero[0][0], tablero[1][1], tablero[2][2]) || linea(tablero[0][2], tablero[1][1], tablero[2][0]);
+
+        if (!botones[0][0].getText().equals("") &&
+            botones[0][0].getText().equals(botones[1][1].getText()) &&
+            botones[1][1].getText().equals(botones[2][2].getText())) return true;
+
+        if (!botones[0][2].getText().equals("") &&
+            botones[0][2].getText().equals(botones[1][1].getText()) &&
+            botones[1][1].getText().equals(botones[2][0].getText())) return true;
+
+        return false;
     }
 
-    private boolean linea(JButton a, JButton b, JButton c) {
-        return !a.getText().isEmpty() && a.getText().equals(b.getText()) && b.getText().equals(c.getText());
+    private boolean tableroLleno() {
+        for (JButton[] fila : botones) {
+            for (JButton b : fila) {
+                if (b.getText().equals("")) return false;
+            }
+        }
+        return true;
     }
 
-    private void desactivarTablero() {
-        for (JButton[] row : tablero) for (JButton b : row) b.setEnabled(false);
+    private void guardarPartida(String resultado) {
+        String jugador = nombreJugadorField.getText().trim();
+        if (jugador.isEmpty()) jugador = "Anónimo";
+
+        Document doc = new Document("jugador", jugador)
+            .append("resultado", resultado)
+            .append("timestamp", System.currentTimeMillis());
+        collection.insertOne(doc);
     }
 
-    private void reiniciarJuego() {
-        for (JButton[] row : tablero) for (JButton b : row) { b.setText(""); b.setEnabled(true); }
-        campoNombre.setText("");
-        turnoX = true; estado.setText("Turno de X"); botonReiniciar.setVisible(false);
-        Collections.shuffle(equipos);
-        Collections.shuffle(posiciones);
+    private void reiniciarTablero() {
+        for (JButton[] fila : botones) {
+            for (JButton b : fila) {
+                b.setText("");
+                b.setForeground(Color.BLACK);
+            }
+        }
+        turnoJugadorX = true;
+        dispose();
+        new TresEnRayo().setVisible(true); // reinicia con nuevos nombres
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(TresEnRayo::new);
+        SwingUtilities.invokeLater(() -> {
+            new TresEnRayo().setVisible(true);
+        });
     }
 }
-
