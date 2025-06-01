@@ -623,7 +623,7 @@ public class Jugador {
 	}
 	
 	public static void InsertarJugadoresAtleticoBilbao(MongoCollection<Document> collection) {
-        List<Document> jugadoresAtleticoBilbao = new ArrayList<>();
+
 	
         List<Document> jugadoresAthleticClub = new ArrayList<>();
 
@@ -723,7 +723,7 @@ public class Jugador {
             .append("posicion", "Delantero centro")
             .append("equipos", Arrays.asList("Athletic Club B", "Athletic Club")));
 
-        collection.insertMany(jugadoresAtleticoBilbao);
+        collection.insertMany(jugadoresAthleticClub);
 	}
 	
 	public static void InsertarJugadoresVillarreal(MongoCollection<Document> collection) {
@@ -1291,7 +1291,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 26)
 	        .append("posicion", "Portero")
-	        .append("equipos", Arrays.asList("Betis Deportivo Balompié")));
+	        .append("equipos", Arrays.asList("Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Adrián")
 	        .append("nacionalidad", List.of("España"))
@@ -1303,7 +1303,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Brasil"))
 	        .append("edad", 24)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", Arrays.asList("Red Bull Bragantino", "SSC Nápoles", "Real Betis")));
+	        .append("equipos", Arrays.asList("SSC Nápoles", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Diego Llorente")
 	        .append("nacionalidad", List.of("España"))
@@ -1315,25 +1315,25 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 34)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", Arrays.asList("FC Barcelona", "Borussia Dortmund", "Real Betis", "Trabzonspor")));
+	        .append("equipos", Arrays.asList("FC Barcelona", "Borussia Dortmund", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Romain Perraud")
 	        .append("nacionalidad", List.of("Francia"))
 	        .append("edad", 27)
 	        .append("posicion", "Lateral izquierdo")
-	        .append("equipos", Arrays.asList("Nice", "Paris FC", "Stade Brestois", "Southampton FC", "Real Betis")));
+	        .append("equipos", Arrays.asList("Paris FC", "Southampton FC", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Ricardo Rodríguez")
 	        .append("nacionalidad", List.of("Suiza", "Chile"))
 	        .append("edad", 32)
 	        .append("posicion", "Lateral izquierdo")
-	        .append("equipos", Arrays.asList("VfL Wolfsburg", "AC Milan", "PSV", "Torino", "Real Betis")));
+	        .append("equipos", Arrays.asList("VfL Wolfsburg", "AC Milan", "PSV", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Aitor Ruibal")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 29)
 	        .append("posicion", "Lateral derecho")
-	        .append("equipos", Arrays.asList("L'Hospitalet", "Cartagena", "Rayo Majadahonda", "Leganés", "Real Betis")));
+	        .append("equipos", Arrays.asList("Leganés", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Héctor Bellerín")
 	        .append("nacionalidad", List.of("España"))
@@ -1351,7 +1351,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Senegal", "Francia"))
 	        .append("edad", 32)
 	        .append("posicion", "Lateral derecho")
-	        .append("equipos", Arrays.asList("PSG", "Evian", "Nantes", "Bordeaux", "Real Betis")));
+	        .append("equipos", Arrays.asList("PSG", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Johnny Cardoso")
 	        .append("nacionalidad", List.of("Estados Unidos", "Italia"))
@@ -1375,19 +1375,19 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Argentina", "Italia"))
 	        .append("edad", 29)
 	        .append("posicion", "Mediocentro")
-	        .append("equipos", Arrays.asList("Rosario Central", "PSG", "Real Betis", "Tottenham Hotspur", "Villarreal")));
+	        .append("equipos", Arrays.asList("PSG", "Real Betis", "Tottenham Hotspur", "Villarreal")));
 
 	    jugadoresBetis.add(new Document("nombre", "Sergi Altimira")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 23)
 	        .append("posicion", "Mediocentro")
-	        .append("equipos", Arrays.asList("Sabadell", "Getafe", "Real Betis")));
+	        .append("equipos", Arrays.asList("Getafe", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Mateo Flores")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 21)
 	        .append("posicion", "Mediocentro")
-	        .append("equipos", Arrays.asList("Betis Deportivo Balompié")));
+	        .append("equipos", Arrays.asList("Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Pablo Fornals")
 	        .append("nacionalidad", List.of("España"))
@@ -1405,37 +1405,37 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Marruecos", "España"))
 	        .append("edad", 23)
 	        .append("posicion", "Extremo izquierdo")
-	        .append("equipos", Arrays.asList("Hércules", "Barcelona", "Osasuna", "Real Betis")));
+	        .append("equipos", Arrays.asList("Barcelona", "Osasuna", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Jesús Rodríguez")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 19)
 	        .append("posicion", "Extremo izquierdo")
-	        .append("equipos", Arrays.asList("Betis Deportivo Balompié")));
+	        .append("equipos", Arrays.asList("Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Antony")
 	        .append("nacionalidad", List.of("Brasil"))
 	        .append("edad", 25)
 	        .append("posicion", "Extremo derecho")
-	        .append("equipos", Arrays.asList("São Paulo", "Ajax", "Manchester United", "Real Betis")));
+	        .append("equipos", Arrays.asList("Ajax", "Manchester United", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Cucho Hernández")
 	        .append("nacionalidad", List.of("Colombia", "España"))
 	        .append("edad", 26)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", Arrays.asList("América de Cali", "Granada", "Huesca", "Mallorca", "Watford", "Columbus Crew", "Real Betis")));
+	        .append("equipos", Arrays.asList("Granada", "Mallorca", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Chimy Ávila")
 	        .append("nacionalidad", List.of("Argentina", "España"))
 	        .append("edad", 31)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", Arrays.asList("San Lorenzo", "Huesca", "Osasuna", "Real Betis")));
+	        .append("equipos", Arrays.asList("Osasuna", "Real Betis")));
 
 	    jugadoresBetis.add(new Document("nombre", "Cédric Bakambu")
 	        .append("nacionalidad", List.of("RD del Congo", "Francia"))
 	        .append("edad", 34)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", Arrays.asList("Sochaux", "Bursaspor", "Villarreal", "Beijing Guoan", "Marseille", "Galatasaray", "Real Betis")));
+	        .append("equipos", Arrays.asList("Villarreal", "Real Betis")));
 
 	    collection.insertMany(jugadoresBetis);
 	}
@@ -1448,67 +1448,67 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Croacia", "Bosnia y Herzegovina"))
 	        .append("edad", 26)
 	        .append("posicion", "Portero")
-	        .append("equipos", Arrays.asList("Dinamo Zagreb", "Varazdin", "Lokomotiv Plovdiv")));
+	        .append("equipos", Arrays.asList("UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Jasper Cillessen")
 	        .append("nacionalidad", List.of("Países Bajos"))
 	        .append("edad", 36)
 	        .append("posicion", "Portero")
-	        .append("equipos", Arrays.asList("NEC Nijmegen", "Ajax", "FC Barcelona", "Valencia CF", "NEC Nijmegen")));
+	        .append("equipos", Arrays.asList("FC Barcelona", "Valencia CF", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Mika Mármol")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 23)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", Arrays.asList("Barcelona B", "Andorra", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Scott McKenna")
 	        .append("nacionalidad", List.of("Escocia"))
 	        .append("edad", 28)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", Arrays.asList("Aberdeen", "Nottingham Forest", "Copenhague")));
+	        .append("equipos", Arrays.asList("Nottingham Forest", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Juanma Herzog")
 	        .append("nacionalidad", List.of("España", "Alemania"))
 	        .append("edad", 21)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", Arrays.asList("Las Palmas Atlético")));
+	        .append("equipos", Arrays.asList("UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Alex Suárez")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 32)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", Arrays.asList("Las Palmas C", "Las Palmas Atlético", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Álex Muñoz")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 30)
 	        .append("posicion", "Lateral izquierdo")
-	        .append("equipos", Arrays.asList("Hércules", "Zaragoza", "Tenerife", "Levante UD")));
+	        .append("equipos", Arrays.asList("UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Andy Pelmard")
 	        .append("nacionalidad", List.of("Francia", "Guadalupe"))
 	        .append("edad", 25)
 	        .append("posicion", "Lateral derecho")
-	        .append("equipos", Arrays.asList("Nice", "Basel", "Clermont Foot 63")));
+	        .append("equipos", Arrays.asList("UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Viti Rozada")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 27)
 	        .append("posicion", "Lateral derecho")
-	        .append("equipos", Arrays.asList("Real Oviedo B", "Real Oviedo")));
+	        .append("equipos", Arrays.asList("Real Oviedo", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Marvin Park")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 24)
 	        .append("posicion", "Lateral derecho")
-	        .append("equipos", Arrays.asList("Trival Valderas", "Real Madrid Juvenil", "Real Madrid Castilla", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("Real Madrid Castilla", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Dário Essugo")
 	        .append("nacionalidad", List.of("Portugal", "Angola"))
 	        .append("edad", 20)
 	        .append("posicion", "Pivote")
-	        .append("equipos", Arrays.asList("Sporting CP")));
+	        .append("equipos", Arrays.asList("Sporting CP", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Stefan Bajcetic")
 	        .append("nacionalidad", List.of("España", "Serbia"))
@@ -1520,19 +1520,19 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 30)
 	        .append("posicion", "Mediocentro")
-	        .append("equipos", Arrays.asList("Real Madrid Castilla", "Lugo", "Tenerife", "Oviedo", "Eibar", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("Real Madrid Castilla", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Enzo Loiodice")
 	        .append("nacionalidad", List.of("Francia"))
 	        .append("edad", 24)
 	        .append("posicion", "Mediocentro")
-	        .append("equipos", Arrays.asList("Dijon", "Wolverhampton Wanderers", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("Wolverhampton Wanderers", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "José Campaña")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 31)
 	        .append("posicion", "Mediocentro")
-	        .append("equipos", Arrays.asList("Sevilla", "Crystal Palace", "Sampdoria", "Nürnberg", "Levante UD", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("Sevilla", "Crystal Palace", "Levante UD", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Alberto Moleiro")
 	        .append("nacionalidad", List.of("España", "Cuba"))
@@ -1544,55 +1544,55 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 29)
 	        .append("posicion", "Mediocentro ofensivo")
-	        .append("equipos", Arrays.asList("UD Las Palmas B", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Manu Fuster")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 27)
 	        .append("posicion", "Extremo izquierdo")
-	        .append("equipos", Arrays.asList("CD Olímpic", "Guijuelo", "Albacete Balompié")));
+	        .append("equipos", Arrays.asList("Albacete Balompié", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Benito Ramírez")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 29)
 	        .append("posicion", "Extremo izquierdo")
-	        .append("equipos", Arrays.asList("Las Palmas B", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Adnan Januzaj")
 	        .append("nacionalidad", List.of("Bélgica", "Kosovo"))
 	        .append("edad", 30)
 	        .append("posicion", "Extremo derecho")
-	        .append("equipos", Arrays.asList("Manchester United", "Borussia Dortmund", "Sunderland", "Real Sociedad", "Sevilla FC")));
+	        .append("equipos", Arrays.asList("Manchester United", "Borussia Dortmund", "Real Sociedad", "Sevilla FC")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Fábio Silva")
 	        .append("nacionalidad", List.of("Portugal"))
 	        .append("edad", 22)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", Arrays.asList("FC Porto", "Wolverhampton Wanderers", "Anderlecht", "PSV Eindhoven")));
+	        .append("equipos", Arrays.asList("FC Porto", "Wolverhampton Wanderers", "PSV Eindhoven")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Oli McBurnie")
 	        .append("nacionalidad", List.of("Escocia", "Inglaterra"))
 	        .append("edad", 28)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", Arrays.asList("Bradford", "Swansea", "Barnsley", "Sheffield United")));
+	        .append("equipos", Arrays.asList("UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Sandro Ramírez")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 29)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", Arrays.asList("FC Barcelona", "Málaga", "Everton", "Sevilla", "Real Sociedad", "Huesca", "Getafe", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("FC Barcelona", "Málaga", "Everton", "Sevilla", "Real Sociedad", "Getafe", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Marc Cardona")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 29)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", Arrays.asList("Eibar", "Barcelona B", "Osasuna", "Mallorca", "Go Ahead Eagles", "UD Las Palmas")));
+	        .append("equipos", Arrays.asList("Osasuna", "Mallorca", "UD Las Palmas")));
 
 	    jugadoresPalmas.add(new Document("nombre", "Jaime Mata")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 36)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", Arrays.asList("Lleida", "Girona", "Tarragona", "Valladolid", "Getafe CF")));
+	        .append("equipos", Arrays.asList("Girona", "Valladolid", "Getafe CF")));
 
 	    collection.insertMany(jugadoresPalmas);
 	}
@@ -1629,13 +1629,13 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 30)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", Arrays.asList("Sin equipo", "Osasuna")));
+	        .append("equipos", Arrays.asList("Osasuna")));
 
 	    jugadoresOsasuna.add(new Document("nombre", "Unai García")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 33)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", Arrays.asList("Real Oviedo", "Osasuna")));
+	        .append("equipos", Arrays.asList("Osasuna")));
 
 	    jugadoresOsasuna.add(new Document("nombre", "Abel Bretones")
 	        .append("nacionalidad", List.of("España"))
@@ -1757,7 +1757,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 21)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", Arrays.asList("RC Celta Fortuna", "Celta")));
+	        .append("equipos", Arrays.asList("Celta")));
 
 	    jugadoresCelta.add(new Document("nombre", "Carl Starfelt")
 	        .append("nacionalidad", List.of("Suecia"))
@@ -1811,7 +1811,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 22)
 	        .append("posicion", "Pivote")
-	        .append("equipos", Arrays.asList("RC Celta Fortuna", "Celta")));
+	        .append("equipos", Arrays.asList("Celta")));
 
 	    jugadoresCelta.add(new Document("nombre", "Jailson")
 	        .append("nacionalidad", List.of("Brasil"))
@@ -1841,7 +1841,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 21)
 	        .append("posicion", "Extremo izquierdo")
-	        .append("equipos", Arrays.asList("RC Celta Fortuna", "Celta")));
+	        .append("equipos", Arrays.asList("Celta")));
 
 	    jugadoresCelta.add(new Document("nombre", "Williot Swedberg")
 	        .append("nacionalidad", List.of("Suecia"))
@@ -1915,7 +1915,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 23)
 	        .append("posicion", "Portero")
-	        .append("equipos", Arrays.asList("RCD Espanyol B")));
+	        .append("equipos", Arrays.asList("Espanyol")));
 
 	    jugadoresEspanyol.add(new Document("nombre", "Marash Kumbulla")
 	        .append("nacionalidad", List.of("Albania", "Italia"))
@@ -1969,7 +1969,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 28)
 	        .append("posicion", "Lateral derecho")
-	        .append("equipos", Arrays.asList("SD Eibar", "Espanyol")));
+	        .append("equipos", Arrays.asList("Espanyol")));
 
 	    jugadoresEspanyol.add(new Document("nombre", "Urko González de Zárate")
 	        .append("nacionalidad", List.of("España"))
@@ -1981,7 +1981,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("República Checa"))
 	        .append("edad", 27)
 	        .append("posicion", "Mediocentro")
-	        .append("equipos", Arrays.asList("1.FC Unión Berlín", "Espanyol")));
+	        .append("equipos", Arrays.asList("Espanyol")));
 
 	    jugadoresEspanyol.add(new Document("nombre", "Pol Lozano")
 	        .append("nacionalidad", List.of("España"))
@@ -2041,13 +2041,13 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 22)
 	        .append("posicion", "Extremo derecho")
-	        .append("equipos", Arrays.asList("RCD Espanyol B")));
+	        .append("equipos", Arrays.asList("Espanyol")));
 
 	    jugadoresEspanyol.add(new Document("nombre", "Roberto Fernández")
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 22)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", Arrays.asList("SC Braga", "Espanyol")));
+	        .append("equipos", Arrays.asList("Espanyol")));
 
 	    jugadoresEspanyol.add(new Document("nombre", "Walid Cheddira")
 	        .append("nacionalidad", List.of("Marruecos", "Italia"))
@@ -2114,7 +2114,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 22)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", List.of("Burgos CF", "Mallorca")));
+	        .append("equipos", List.of("Mallorca")));
 
 	    jugadoresMallorca.add(new Document("nombre", "Johan Mojica")
 	        .append("nacionalidad", List.of("Colombia", "España"))
@@ -2186,13 +2186,13 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Portugal", "Cabo Verde"))
 	        .append("edad", 25)
 	        .append("posicion", "Extremo izquierdo")
-	        .append("equipos", List.of("Wolverhampton Wanderers", "Mallorca")));
+	        .append("equipos", List.of("Mallorca")));
 
 	    jugadoresMallorca.add(new Document("nombre", "Takuma Asano")
 	        .append("nacionalidad", List.of("Japón"))
 	        .append("edad", 30)
 	        .append("posicion", "Extremo derecho")
-	        .append("equipos", List.of("VfL Bochum", "Mallorca")));
+	        .append("equipos", List.of("Mallorca")));
 
 	    jugadoresMallorca.add(new Document("nombre", "Valery Fernández")
 	        .append("nacionalidad", List.of("España"))
@@ -2241,7 +2241,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("República Checa"))
 	        .append("edad", 26)
 	        .append("posicion", "Portero")
-	        .append("equipos", List.of("FC Banik Ostrava", "Getafe CF")));
+	        .append("equipos", List.of("Getafe CF")));
 
 	    jugadoresGetafe.add(new Document("nombre", "Omar Alderete")
 	        .append("nacionalidad", List.of("Paraguay"))
@@ -2259,7 +2259,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 26)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", List.of("SD Eibar", "Getafe CF")));
+	        .append("equipos", List.of("Getafe CF")));
 
 	    jugadoresGetafe.add(new Document("nombre", "Domingos Duarte")
 	        .append("nacionalidad", List.of("Portugal"))
@@ -2289,7 +2289,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Camerún", "Francia"))
 	        .append("edad", 37)
 	        .append("posicion", "Lateral derecho")
-	        .append("equipos", List.of("Sin equipo", "Getafe CF")));
+	        .append("equipos", List.of("Getafe CF")));
 
 	    jugadoresGetafe.add(new Document("nombre", "Ismael Bekhoucha")
 	        .append("nacionalidad", List.of("Marruecos", "España"))
@@ -2325,7 +2325,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Nigeria"))
 	        .append("edad", 22)
 	        .append("posicion", "Mediocentro ofensivo")
-	        .append("equipos", List.of("AD Ceuta FC", "Getafe CF")));
+	        .append("equipos", List.of("Getafe CF")));
 
 	    jugadoresGetafe.add(new Document("nombre", "Alberto Risco")
 	        .append("nacionalidad", List.of("España"))
@@ -2337,7 +2337,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España", "Guinea"))
 	        .append("edad", 22)
 	        .append("posicion", "Extremo izquierdo")
-	        .append("equipos", List.of("Getafe CF B", "Getafe CF")));
+	        .append("equipos", List.of("Getafe CF")));
 
 	    jugadoresGetafe.add(new Document("nombre", "Juanmi")
 	        .append("nacionalidad", List.of("España"))
@@ -2373,7 +2373,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Turquía"))
 	        .append("edad", 22)
 	        .append("posicion", "Delantero centro")
-	        .append("equipos", List.of("Stade Rennais FC", "Getafe CF")));
+	        .append("equipos", List.of("Getafe CF")));
 
 	    jugadoresGetafe.add(new Document("nombre", "Álvaro Rodríguez")
 	        .append("nacionalidad", List.of("Uruguay", "España"))
@@ -2404,7 +2404,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Argentina", "España"))
 	        .append("edad", 24)
 	        .append("posicion", "Portero")
-	        .append("equipos", List.of("Deportivo Alavés B")));
+	        .append("equipos", List.of("Deportivo Alavés")));
 
 	    jugadoresAlaves.add(new Document("nombre", "Abdel Abqar")
 	        .append("nacionalidad", List.of("Marruecos"))
@@ -2428,13 +2428,13 @@ public class Jugador {
 	        .append("nacionalidad", List.of("España"))
 	        .append("edad", 23)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", List.of("Deportivo Alavés B")));
+	        .append("equipos", List.of("Deportivo Alavés")));
 
 	    jugadoresAlaves.add(new Document("nombre", "Facundo Garcés")
 	        .append("nacionalidad", List.of("Argentina", "España"))
 	        .append("edad", 25)
 	        .append("posicion", "Defensa central")
-	        .append("equipos", List.of("CA Colón", "Deportivo Alavés")));
+	        .append("equipos", List.of("Deportivo Alavés")));
 
 	    jugadoresAlaves.add(new Document("nombre", "Aleksandar Sedlar")
 	        .append("nacionalidad", List.of("Serbia"))
@@ -2506,7 +2506,7 @@ public class Jugador {
 	        .append("nacionalidad", List.of("Argentina", "Polonia"))
 	        .append("edad", 27)
 	        .append("posicion", "Extremo izquierdo")
-	        .append("equipos", List.of("CD Godoy Cruz Antonio Tomba", "Deportivo Alavés")));
+	        .append("equipos", List.of("Deportivo Alavés")));
 
 	    jugadoresAlaves.add(new Document("nombre", "Carlos Vicente")
 	        .append("nacionalidad", List.of("España"))
@@ -2549,7 +2549,7 @@ public class Jugador {
 	    	    .append("nacionalidad", List.of("Argentina", "Italia"))
 	    	    .append("edad", 29)
 	    	    .append("posicion", "Portero")
-	    	    .append("equipos", List.of("Rayo Vallecano", "CA River Plate")));
+	    	    .append("equipos", List.of("Rayo Vallecano")));
 
 	    jugadoresRayoVallecano.add(new Document("nombre", "Dani Cárdenas")
 	    	    .append("nacionalidad", List.of("España"))
@@ -2573,7 +2573,7 @@ public class Jugador {
 	    	    .append("nacionalidad", List.of("España"))
 	    	    .append("edad", 22)
 	    	    .append("posicion", "Defensa central")
-	    	    .append("equipos", List.of("Rayo Vallecano", "FC Barcelona Atlètic")));
+	    	    .append("equipos", List.of("Rayo Vallecano")));
 
 	    jugadoresRayoVallecano.add(new Document("nombre", "Aridane Hernández")
 	    	    .append("nacionalidad", List.of("España"))
@@ -2627,7 +2627,7 @@ public class Jugador {
 	    	    .append("nacionalidad", List.of("España"))
 	    	    .append("edad", 26)
 	    	    .append("posicion", "Mediocentro")
-	    	    .append("equipos", List.of("Rayo Vallecano", "Girondins de Burdeos")));
+	    	    .append("equipos", List.of("Rayo Vallecano")));
 
 	    jugadoresRayoVallecano.add(new Document("nombre", "Pathé Ciss")
 	    	    .append("nacionalidad", List.of("Senegal"))
@@ -2778,7 +2778,7 @@ public class Jugador {
 	    	    .append("nacionalidad", List.of("España"))
 	    	    .append("edad", 21)
 	    	    .append("posicion", "Pivote")
-	    	    .append("equipos", List.of("Real Valladolid", "Real Madrid Castilla")));
+	    	    .append("equipos", List.of("Real Valladolid")));
 
 	    	jugadoresValladolid.add(new Document("nombre", "Stanko Juric")
 	    	    .append("nacionalidad", List.of("Croacia"))
@@ -2790,7 +2790,7 @@ public class Jugador {
 	    	    .append("nacionalidad", List.of("Hungría"))
 	    	    .append("edad", 25)
 	    	    .append("posicion", "Mediocentro")
-	    	    .append("equipos", List.of("Real Valladolid", "Kecskeméti TE")));
+	    	    .append("equipos", List.of("Real Valladolid")));
 
 	    	jugadoresValladolid.add(new Document("nombre", "Selim Amallah")
 	    	    .append("nacionalidad", List.of("Marruecos", "Bélgica"))
@@ -2802,7 +2802,7 @@ public class Jugador {
 	    	    .append("nacionalidad", List.of("España"))
 	    	    .append("edad", 21)
 	    	    .append("posicion", "Mediocentro ofensivo")
-	    	    .append("equipos", List.of("Real Valladolid", "Real Valladolid Promesas")));
+	    	    .append("equipos", List.of("Real Valladolid")));
 
 	    	jugadoresValladolid.add(new Document("nombre", "Raúl Moro")
 	    	    .append("nacionalidad", List.of("España"))
@@ -2820,7 +2820,7 @@ public class Jugador {
 	    	    .append("nacionalidad", List.of("Brasil"))
 	    	    .append("edad", 29)
 	    	    .append("posicion", "Extremo izquierdo")
-	    	    .append("equipos", List.of("Real Valladolid", "CF Pachuca")));
+	    	    .append("equipos", List.of("Real Valladolid")));
 
 	    	jugadoresValladolid.add(new Document("nombre", "Amath Ndiaye")
 	    	    .append("nacionalidad", List.of("Senegal", "España"))
@@ -2911,7 +2911,7 @@ public class Jugador {
 	    	    .append("nacionalidad", List.of("Croacia"))
 	    	    .append("edad", 32)
 	    	    .append("posicion", "Lateral izquierdo")
-	    	    .append("equipos", List.of("CD Leganés", "Trabzonspor")));
+	    	    .append("equipos", List.of("CD Leganés")));
 
 	    	jugadoresLeganes.add(new Document("nombre", "Valentin Rosier")
 	    	    .append("nacionalidad", List.of("Francia", "Guadalupe"))
@@ -2977,7 +2977,7 @@ public class Jugador {
 	    	    .append("nacionalidad", List.of("Cabo Verde", "Portugal"))
 	    	    .append("edad", 25)
 	    	    .append("posicion", "Extremo izquierdo")
-	    	    .append("equipos", List.of("CD Leganés", "Aberdeen FC")));
+	    	    .append("equipos", List.of("CD Leganés")));
 
 	    	jugadoresLeganes.add(new Document("nombre", "Yan Diomande")
 	    	    .append("nacionalidad", List.of("Costa de Marfil"))

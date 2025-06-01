@@ -31,8 +31,8 @@ public class TresEnRayo extends JFrame {
         collection = database.getCollection("partidas");
 
         // Elegimos aleatoriamente 3 países y 3 equipos
-        List<String> listaPaises = new ArrayList<>(Arrays.asList(paises));
-        List<String> listaEquipos = new ArrayList<>(Arrays.asList(equipos));
+        List<String> listaPaises = Arrays.asList(paises);
+        List<String> listaEquipos = Arrays.asList(equipos);
         Collections.shuffle(listaPaises);
         Collections.shuffle(listaEquipos);
         String[] paisesSeleccionados = listaPaises.subList(0, 3).toArray(new String[0]);
@@ -163,3 +163,4 @@ public class TresEnRayo extends JFrame {
         });
     }
 }
+
