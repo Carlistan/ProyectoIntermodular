@@ -27,8 +27,8 @@ public class TresEnRayo extends JFrame {
         // MongoDB
         String uri = "mongodb+srv://javiercarmonasolis2006:2PXjxAw1MGPcNuLy@clusterintermodular.whimpxk.mongodb.net/?retryWrites=true&w=majority&appName=ClusterIntermodular";
         MongoClient mongoClient = MongoClients.create(uri);
-        MongoDatabase database = mongoClient.getDatabase("futbolEnRaya");
-        collection = database.getCollection("partidas");
+        MongoDatabase database = mongoClient.getDatabase("futbol3raya");
+        collection = database.getCollection("jugadores");
 
         // Elegimos aleatoriamente 3 países y 3 equipos
         List<String> listaPaises = Arrays.asList(paises);
@@ -73,8 +73,7 @@ public class TresEnRayo extends JFrame {
         JLabel label = new JLabel(text, SwingConstants.CENTER);
         label.setFont(new Font("Arial", Font.BOLD, 16));
         label.setOpaque(true);
-        label.setBackground(Color.BLACK);
-        label.setForeground(Color.WHITE);
+        label.setForeground(Color.BLACK);
         return label;
     }
 
@@ -82,16 +81,33 @@ public class TresEnRayo extends JFrame {
         JButton boton = botones[fila][columna];
         if (!boton.getText().equals("")) return;
 
+        String nombre = nombreJugadorField.getText().trim();
+        if (nombre.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Introduce el nombre del jugador.");
+            return;
+        }
+
+        // Buscar jugador en MongoDB
+        Document jugador = collection.find(new Document("nombre", nombre)).first();
+
+        if (jugador == null) {
+            JOptionPane.showMessageDialog(this, "❌ Jugador no encontrado en la base de datos.");
+            return;
+        }
+
+        // Si se encuentra, marcar la casilla
         if (turnoJugadorX) {
-            boton.setText("✔");
-            boton.setForeground(new Color(0, 153, 0));
+            boton.setText("X");
+            boton.setForeground(Color.GREEN);
         } else {
-            boton.setText("✘");
+            boton.setText("O");
             boton.setForeground(Color.RED);
         }
 
+        nombreJugadorField.setText(""); // limpiar el campo
+
         if (hayGanador()) {
-            String ganador = turnoJugadorX ? "Jugador ✔" : "Jugador ✘";
+            String ganador = turnoJugadorX ? "Jugador X" : "Jugador O";
             JOptionPane.showMessageDialog(this, "¡Ganó " + ganador + "!");
             guardarPartida(ganador);
             reiniciarTablero();
@@ -103,6 +119,7 @@ public class TresEnRayo extends JFrame {
             turnoJugadorX = !turnoJugadorX;
         }
     }
+
 
     private boolean hayGanador() {
         for (int i = 0; i < 3; i++) {
