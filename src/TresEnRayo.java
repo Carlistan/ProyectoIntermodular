@@ -30,7 +30,6 @@ public class TresEnRayo extends JFrame {
         MongoDatabase database = mongoClient.getDatabase("futbol3raya");
         collection = database.getCollection("jugadores");
 
-        // Elegimos aleatoriamente 3 países y 3 equipos
         List<String> listaPaises = Arrays.asList(paises);
         List<String> listaEquipos = Arrays.asList(equipos);
         Collections.shuffle(listaPaises);
@@ -87,7 +86,6 @@ public class TresEnRayo extends JFrame {
             return;
         }
 
-        // Buscar jugador en MongoDB
         Document jugador = collection.find(new Document("nombre", nombre)).first();
 
         if (jugador == null) {
@@ -95,7 +93,6 @@ public class TresEnRayo extends JFrame {
             return;
         }
 
-        // Si se encuentra, marcar la casilla
         if (turnoJugadorX) {
             boton.setText("X");
             boton.setForeground(Color.GREEN);
@@ -104,7 +101,7 @@ public class TresEnRayo extends JFrame {
             boton.setForeground(Color.RED);
         }
 
-        nombreJugadorField.setText(""); // limpiar el campo
+        nombreJugadorField.setText(""); 
 
         if (hayGanador()) {
             String ganador = turnoJugadorX ? "Jugador X" : "Jugador O";
@@ -171,7 +168,7 @@ public class TresEnRayo extends JFrame {
         }
         turnoJugadorX = true;
         dispose();
-        new TresEnRayo().setVisible(true); // reinicia con nuevos nombres
+        new TresEnRayo().setVisible(true); 
     }
 
     public static void main(String[] args) {
