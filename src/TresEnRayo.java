@@ -14,8 +14,8 @@ public class TresEnRayo extends JFrame {
     private boolean turnoJugadorX = true;
     private MongoCollection<Document> collection;
     private JTextField nombreJugadorField;
-    private String[] paises = {"Portugal", "Alemania", "Brasil", "España", "Francia", "Argentina", "Uruguay"};
-    private String[] equipos = {"Real Madrid", "Betis", "Alavés", "Barcelona", "Sevilla", "Valencia", "Osasuna"};
+    private String[] paises = {"Portugal", "Alemania", "Brasil", "España", "Francia", "Argentina", "Uruguay", "Marruecos", "Paises Bajos", "Bélgica", "Sérbia", "Croacia", "Senegal"};
+    private String[] equipos = {"Real Madrid", "Barcelona", "Atletico de Madrid", "Real Sociedad", "Atletic de Bilbao", "Villarreal", "Valencia","Girona", "Sevilla", "Betis", "Palmas", "Osasuna", "Celta", "Espanyol", "Mallorca", "Getafe", "Alaves", "Rayo Vallecano", "Valladolid", "Leganes"};
 
 
     public TresEnRayo() {
@@ -91,7 +91,7 @@ public class TresEnRayo extends JFrame {
         Document jugador = collection.find(new Document("nombre", nombre)).first();
 
         if (jugador == null) {
-            JOptionPane.showMessageDialog(this, "❌ Jugador no encontrado en la base de datos.");
+            JOptionPane.showMessageDialog(this, "Jugador no encontrado en la base de datos.");
             return;
         }
 
